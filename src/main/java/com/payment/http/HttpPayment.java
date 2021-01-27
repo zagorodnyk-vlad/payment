@@ -15,7 +15,7 @@ import java.io.InputStreamReader;
 public class HttpPayment {
 
   public ApplicationResponse getStatus() throws IOException {
-    Request request = Request.Get("http://localhost:8081/randomstatus");
+    Request request = Request.Get("http://localhost:8080/randomstatus");
     HttpEntity resp = request.execute().returnResponse().getEntity();
     //разбираем ответ
     BufferedReader rd = new BufferedReader(new InputStreamReader(resp.getContent()));
